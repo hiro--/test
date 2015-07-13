@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>上拉</title>
+       <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+
+<body> 
+<style>
+.show{
+    overflow: hidden;
+    height: 170px;
+    width:400px;
+    margin-top:270px;
+}
+.div{
+    width:400px;
+    margin-top:-170px;
+}
+.triangle{
+    position: static;
+    border-width: 10px 7px 0 7px;
+    border-color:#ccc transparent transparent transparent;
+    border-style:solid; 
+    width:0;
+    margin: auto;
+}
+.box{
+    position: static;
+    border-radius: 15px;
+    width:100%;
+    height: 160px;
+
+    background-color: #ccc
+}
+</style>
+    <button id="go">go</button>
+
+
+<div class="show">
+    <div class="div">
+        <div class="box"></div>
+        <div class="triangle"></div>
+    </div>
+</div>
+
+<script>
+    $("#go").click(function(){
+        $(".show").animate({
+        "margin-top" : "100px"
+        },1000);
+        $(".div").animate({
+            "margin-top" : "0px"
+        },1000);
+    });
+</script>
+</body>
+</html>
